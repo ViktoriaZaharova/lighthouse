@@ -1,0 +1,481 @@
+@import "vars"
+
+/*==========  section home ==========*/
+.home-slider
+  .slick-arrow
+    position: absolute
+    bottom: 75px
+    z-index: 1
+  .slick-next
+    right: 59px
+  .slick-prev
+    right: 129px
+  &__title
+    font-size: 42px
+    font-weight: 800
+    margin: 0 0 17px
+  &__text
+    font-size: 24px
+    font-weight: bold
+    color: $accent
+
+
+.home-slider-item
+  width: 100%
+  border-radius: 10px
+  overflow: hidden
+  position: relative
+  padding: 142px 0 58px
+  z-index: 1
+
+.home-slider__bg
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  z-index: -1
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.home-content
+  max-width: 823px
+  width: 100%
+  background: rgba(255, 255, 255, 0.8)
+  border-radius: 10px
+  backdrop-filter: blur(14px)
+  padding: 51px 22px 66px 62px
+  text-transform: uppercase
+
+.logo-company
+  padding: 17px 34px
+  background: $accent
+  border-radius: 5px
+  margin: 115px 0 0
+
+  width: fit-content
+
+/*==========  section home end  ==========*/
+
+
+
+/*==========  section about ==========*/
+.about
+  margin: 76px 0 77px
+
+.about-image
+  @include d-flex
+  border-radius: 10px
+  width: 100%
+  overflow: hidden
+  img
+    width: 100%
+
+.about-content
+  background: #fff
+  box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  min-width: 775px
+  float: right
+  position: relative
+  z-index: 1
+  &__head
+    background: $accent
+    color: #fff
+    padding: 17px 38px 13px
+    border-radius: 10px
+  &__body
+    padding: 27px 46px 27px 38px
+    font-size: 27px
+    line-height: 40px
+
+
+
+/*==========  section about end  ==========*/
+
+/*==========  section shops ==========*/
+.shop-card
+  width: 100%
+  height: 100%
+  box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  background: #fff
+  padding: 20px 25px
+  display: flex
+  flex-direction: column
+  &__img
+    position: relative
+    width: 100%
+    height: 265px
+    border-radius: 5px
+    overflow: hidden
+    @include d-flex
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &-logo
+      position: absolute
+      right: 0
+      top: 0
+      width: 70px
+      height: 70px
+      border-radius: 5px
+      overflow: hidden
+      @include d-flex
+
+  &__body
+    width: 100%
+    padding: 9px 0 0
+    margin: 0 0 20px
+  &__head
+    width: 100%
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: space-between
+    font-size: 14px
+    color: $accent
+    margin: 0 0 18px
+  &__title
+    text-transform: uppercase
+    font-size: 24px
+    font-weight: 800
+    color: #000
+    &:hover
+      color: $accent
+  .box-text
+    color: #686868
+    font-size: 18px
+    line-height: 27px
+  &__footer
+    width: 100%
+    margin: auto 0 0
+    border-top: 1px solid #ED1C24
+    padding: 21px 0 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__contacts
+    color: #626262
+    padding: 0 15px
+    font-size: 14px
+    border:
+      right: 1px solid #A0A0A0
+    &:last-child
+      border: none
+      padding-right: 0
+    &:first-child
+      padding-left: 0
+
+a.shop-card__contacts
+  &:hover
+    color: $accent
+
+.shop-category
+  color: $accent
+  &:hover
+    color: #000
+
+.btn-toggle
+  margin: 12px auto 0
+
+.shops-col
+  display: none
+  &:nth-child(-n+8)
+    display: block
+/*==========  section shops end ==========*/
+
+
+
+/*==========  section map-floor ==========*/
+.map-floor
+  margin: 85px 0 114px
+
+.tab-content
+  margin: 40px 0 0
+  width: 100%
+
+
+.tab-content-wrapper
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.1)
+  background: #fff
+  border-radius: 10px
+  padding: 49px 92px 54px 53px
+
+.tab-content__map
+  max-width: 1013px
+  width: 100%
+  svg
+    width: 100%
+    height: 100%
+
+.tab-content__navigation
+  width: calc(100% - 1013px)
+
+.map-floor-link
+  display: flex
+  align-items: center
+  margin: 0 0 36px
+  font-size: 24px
+  font-weight: bold
+  color: #000
+  &__icon
+    width: 38px
+    height: 38px
+    min-width: 38px
+    margin: 0 19px 0 0
+    @include d-flex
+    img
+      max-height: 100%
+  &:last-child
+    margin: 0
+  &:hover
+    color: $accent
+
+
+.nav-tabs
+  margin: 0
+  width: 100%
+  border: none
+  .nav-item
+    margin: 0 21px 0 0
+    &:last-child
+      margin: 0
+  .nav-link
+    min-width: 130px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0
+    padding: 8.5px 19px
+    font-size: 20px
+    font-weight: bold
+    color: #000
+    border: 1px solid #626262
+      radius: 5px
+    filter: drop-shadow(0px 15px 30px rgba(237, 28, 36, 0.2))
+    &.active
+      box-shadow: 0px 15px 30px rgba(237, 28, 36, 0.2)
+      background: $accent
+      color: #fff
+      border-color: $accent
+      .tab-icon
+        fill: #fff
+
+/*==========  section map-floor end  ==========*/
+
+
+/*==========  section news ==========*/
+
+.news-slider
+  margin: 23px 0 32px
+  .slide
+    padding: 30px 10px
+    height: auto
+  .slick-list
+    margin: 0 -10px
+  .slick-track
+    display: flex
+    align-items: stretch
+
+.news-card
+  width: 100%
+  height: 100%
+  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  background: #fff
+  display: flex
+  flex-direction: column
+  &__img
+    width: 100%
+    height: 286px
+    border-radius: 10px
+    overflow: hidden
+    @include d-flex
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__body
+    width: 100%
+    padding: 15px 25px 0
+  .btn
+    margin: auto 0 27px 21px
+    padding: 0 34.5px
+    font-weight: normal
+  &__title
+    color: #000
+    text-transform: uppercase
+    margin: 12px 0 0
+    font-size: 24px
+    font-weight: 800
+  &__date
+    color: $accent
+    font-size: 14px
+  .box-text
+    margin: 0 0 20px
+    color: #686868
+    font-size: 18px
+    line-height: 27px
+
+
+/*==========  section news end  ==========*/
+
+
+
+/*==========  section there==========*/
+.there
+  background: #F7F7F7
+  padding: 65px 0 30px
+  h2
+    margin: 0 0 14px
+  .nav-tabs
+    .nav-link
+      font-weight: normal
+  .tab-content
+    margin: 47px 0 0
+
+
+.tab-icon
+  @include d-flex
+  width: 20px
+  height: 21px
+  min-width: 20px
+  margin: 0 10px 0 0
+  fill: #626262
+
+.there-box
+  width: 100%
+  background: #fff
+  box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  margin: 0 0 34px
+  padding: 22px 31px
+  &__head
+    width: 100%
+    padding: 0 0 5px
+    margin: 0 0 15px
+    border-bottom: 1px solid $accent
+    p
+      color: #626262
+      font-size: 14px
+  h3
+    font-size: 24px
+    font-weight: 800
+    text-transform: uppercase
+  &__body
+    width: 100%
+
+.route-item
+  margin: 0 0 15px
+  font-size: 14px
+  text-transform: uppercase
+  &:last-child
+    margin: 0
+  p
+    color: $accent
+  span
+    font-weight: bold
+    display: block
+
+/*==========  section there end  ==========*/
+
+
+/*==========  section tenants ==========*/
+.tenants
+  margin: 64px 0 68px
+  .about-image
+    height: 566px
+  .about-content
+    min-width: 622px
+/*==========  section tenants end  ==========*/
+
+
+
+/*==========  section advantages ==========*/
+.advantages-box
+  width: 100%
+  height: 100%
+  min-height: 367px
+  position: relative
+  overflow: hidden
+  border-radius: 10px
+  z-index: 1
+  color: #fff
+  font-size: 24px
+  font-weight: bold
+  line-height: 32px
+  @include d-flex
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 175px
+    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%)
+    border-radius: 0 0 10px 10px
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__text
+    position: absolute
+    left: 0
+    bottom: 0
+    z-index: 1
+    padding: 32px 28px
+    width: 100%
+
+
+/*==========  section end  ==========*/
+
+
+/*==========  section location-complex ==========*/
+.location-complex
+  margin: 53px 0 83px
+  .tab-content
+    margin: 48px 0 0
+  .tab-content-wrapper
+    padding: 0
+    box-shadow: 20px 24px 44px rgba(0, 0, 0, 0.1)
+
+.location-complex-box
+  padding: 43px 44px 33px 10px
+  font-size: 24px
+  &__head
+    border-bottom: 1px solid $accent
+    margin: 0 0 23px
+    padding: 0 0 35px
+  .btn
+    margin: 38px 0 0
+    height: 53px
+    padding: 0 49px
+    text-transform: uppercase
+    font-size: 20px
+    font-weight: bold
+  h4
+    margin: 0 0 30px
+  &__body
+    width: 100%
+  ul
+    margin: 0 0 30px
+  .m-30
+    margin: 30px 0 0
+
+.location-complex-map
+  width: 100%
+  height: 100%
+
+/*==========  section location-complex end  ==========*/
+
+
+
+/*==========  section  ==========*/
+
+/*==========  section end  ==========*/
