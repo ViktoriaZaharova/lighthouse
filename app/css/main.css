@@ -1,4 +1,7 @@
 /*==========  section home ==========*/
+.home {
+  padding: 158px 0 0; }
+
 .home-slider .slick-arrow {
   position: absolute;
   bottom: 75px;
@@ -555,8 +558,20 @@ a.shop-card__contacts:hover {
 
 .location-complex-map {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  max-width: 1013px;
+  min-height: 1148px;
+  max-height: 1148px;
+  overflow: hidden;
+  position: relative; }
+  .location-complex-map img {
+    width: 2800px;
+    max-width: none;
+    height: 2275px;
+    position: relative; }
+
+.location-complex-map2 img {
+  width: 2702px;
+  height: 2891px; }
 
 /*==========  section location-complex end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/

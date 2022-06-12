@@ -60,3 +60,40 @@ $('.btn-close').click(function () {
 });
 
 $('[name="phone"]').mask('+7 (999) 999 - 99 - 99');
+
+
+$(function(){
+    var drag = false;
+    $(".location-complex-map > img").on('mousedown', function(e){
+        e.preventDefault();
+        drag = true;
+    }).on('mouseup mouseout', function(){
+        $(this).data({
+            startX: 0,
+            startY: 0,
+        });
+        drag = false;
+    }).on('mousemove', function(e){
+        e.preventDefault();
+        if(drag){
+            console.log($(this).data(),e);
+            var left = parseInt($(this).css('left')) || 0,
+                top = parseInt($(this).css('top')) || 0,
+                newLeft = left + (e.clientX - ($(this).data().startX || e.clientX)),
+                newTop  = top + (e.clientY - ($(this).data().startY || e.clientY)),
+                parentHeight = $(this).parent().height(),
+                parentWidth = $(this).parent().width(),
+                imgHeight = $(this).height(),
+                imgWidth = $(this).width();
+
+
+            $(this).css({
+                left: newLeft < 0 && (Math.abs(newLeft - parentWidth) < imgWidth) ? newLeft : left,
+                top: newTop < 0 && (Math.abs(newTop - parentHeight) < imgHeight) ? newTop : top
+            }).data({
+                startX: e.clientX,
+                startY: e.clientY,
+            });
+        }
+    })
+});
