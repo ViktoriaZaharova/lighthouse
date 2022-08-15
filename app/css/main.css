@@ -563,7 +563,16 @@ a.shop-card__contacts:hover {
   min-height: 1148px;
   max-height: 1148px;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .location-complex-map img {
     width: 2800px;
     max-width: none;
